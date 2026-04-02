@@ -1,580 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uz">
-
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Melan — boshqaruv paneli</title>
-
-    <!-- Custom fonts for this template-->
-    <link href="asset/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="asset/css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="asset/css/uz-panel.css" rel="stylesheet">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Admin Panel</title>
+  <meta name="description" content="Portfolio loyihalarini boshqarish uchun admin panel.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/admin.css">
 </head>
+<body>
+  <div class="admin-layout">
+    <aside class="sidebar">
+      <a href="#" class="brand">AZ Admin</a>
+      <nav class="menu">
+        <a href="#" class="menu-link active">Dashboard</a>
+        <a href="#" class="menu-link">Loyihalar</a>
+        <a href="#" class="menu-link">Xizmatlar</a>
+        <a href="#" class="menu-link">Xabarlar</a>
+        <a href="#" class="menu-link">Sozlamalar</a>
+      </nav>
+    </aside>
 
-<body id="page-top">
-
-    <!-- Page Wrapper -->
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Melan <sup>admin</sup></div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Boshqaruv paneli</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Melan sayt
-            </div>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMelanBlog"
-                    aria-expanded="false" aria-controls="collapseMelanBlog">
-                    <i class="fas fa-fw fa-newspaper"></i>
-                    <span>Blog</span>
-                </a>
-                <div id="collapseMelanBlog" class="collapse" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Blog boshqaruvi:</h6>
-                        <a class="collapse-item" href="blog-list.html">Barcha yozuvlar</a>
-                        <a class="collapse-item" href="blog-new.html">Yangi yozuv</a>
-                        <a class="collapse-item" href="blog-edit.html">Tahrirlash</a>
-                        <a class="collapse-item" href="blog-view.html">Ko'rish</a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMelanContact"
-                    aria-expanded="false" aria-controls="collapseMelanContact">
-                    <i class="fas fa-fw fa-envelope"></i>
-                    <span>Aloqa</span>
-                </a>
-                <div id="collapseMelanContact" class="collapse" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Aloqa formasi:</h6>
-                        <a class="collapse-item" href="contact-inbox.html">Xabarlar ro'yxati</a>
-                        <a class="collapse-item" href="contact-view.html">Bitta xabar</a>
-                    </div>
-                </div>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="users.html">
-                    <i class="fas fa-fw fa-users"></i>
-                    <span>Foydalanuvchilar</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="settings.html">
-                    <i class="fas fa-fw fa-sliders-h"></i>
-                    <span>Sozlamalar</span></a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="profile.html">
-                    <i class="fas fa-fw fa-user-circle"></i>
-                    <span>Administrator profili</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interfeys
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Komponentlar</span>
-                </a>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Maxsus komponentlar:</h6>
-                        <a class="collapse-item" href="buttons.html">Tugmalar</a>
-                        <a class="collapse-item" href="cards.html">Kartalar</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Yordamchi vositalar</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Qo'shimcha vositalar:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Ranglar</a>
-                        <a class="collapse-item" href="utilities-border.html">Chegaralar</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animatsiyalar</a>
-                        <a class="collapse-item" href="utilities-other.html">Boshqalar</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Qo'shimchalar
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
-                    <i class="fas fa-fw fa-folder"></i>
-                    <span>Sahifalar</span>
-                </a>
-                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Kirish sahifalari:</h6>
-                        <a class="collapse-item" href="login.html">Kirish</a>
-                        <a class="collapse-item" href="register.html">Ro'yxatdan o'tish</a>
-                        <a class="collapse-item" href="forgot-password.html">Parolni tiklash</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Boshqa sahifalar:</h6>
-                        <a class="collapse-item" href="404.html">404 sahifasi</a>
-                        <a class="collapse-item" href="blank.html">Bo'sh sahifa</a>
-                    </div>
-                </div>
-            </li>
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Grafiklar</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Jadvallar</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-           
-
-        </ul>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
-                    <!-- Sidebar Toggle (Topbar) -->
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <!-- Topbar Search -->
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Qidirish..."
-                                aria-label="Qidiruv" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Topbar Navbar -->
-                    <ul class="navbar-nav ml-auto">
-
-                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-search fa-fw"></i>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
-                                aria-labelledby="searchDropdown">
-                                <form class="form-inline mr-auto w-100 navbar-search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Qidirish..." aria-label="Qidiruv"
-                                            aria-describedby="basic-addon2">
-                                        <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
-                                                <i class="fas fa-search fa-sm"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
-                            <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="alertsDropdown">
-                                <h6 class="dropdown-header">
-                                    Bildirishnomalar
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-primary">
-                                            <i class="fas fa-file-alt text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">2019-yil, 12-dekabr</div>
-                                        <span class="font-weight-bold">Yangi oylik hisobot yuklab olishga tayyor!</span>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-success">
-                                            <i class="fas fa-donate text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">2019-yil, 7-dekabr</div>
-                                        $290.29 hisobingizga tushdi!
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="mr-3">
-                                        <div class="icon-circle bg-warning">
-                                            <i class="fas fa-exclamation-triangle text-white"></i>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div class="small text-gray-500">2019-yil, 2-dekabr</div>
-                                        Xarajatlar: hisobingizda odatdagidan ko'p xarajat qayd etildi.
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Barcha bildirishnomalar</a>
-                            </div>
-                        </li>
-
-                        <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
-                                <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
-                            <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="messagesDropdown">
-                                <h6 class="dropdown-header">
-                                    Xabarlar
-                                </h6>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
-                                            problem I've been having.</div>
-                                        <div class="small text-gray-500">Malika R. · 58 daq</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
-                                            alt="...">
-                                        <div class="status-indicator"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Javohir K. · 1 kun</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
-                                            alt="...">
-                                        <div class="status-indicator bg-warning"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Madina A. · 2 kun</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item d-flex align-items-center" href="#">
-                                    <div class="dropdown-list-image mr-3">
-                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
-                                            alt="...">
-                                        <div class="status-indicator bg-success"></div>
-                                    </div>
-                                    <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Texnik yordam · 2 hafta</div>
-                                    </div>
-                                </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Barcha xabarlar</a>
-                            </div>
-                        </li>
-
-                        <div class="topbar-divider d-none d-sm-block"></div>
-
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrator</span>
-                                <img class="img-profile rounded-circle"
-                                    src="asset/img/undraw_profile.svg">
-                            </a>
-                            <!-- Dropdown - User Information -->
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="profile.html">
-                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profil
-                                </a>
-                                <a class="dropdown-item" href="settings.html">
-                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Sozlamalar
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Faollik jurnali
-                                </a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="login.html">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Chiqish
-                                </a>
-                            </div>
-                        </li>
-
-                    </ul>
-
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Page Heading -->
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Boshqaruv paneli</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Hisobotni yuklash</a>
-                    </div>
-
-                    <div class="row mb-4">
-                        <div class="col-12">
-                            <div class="card border-left-primary shadow-sm">
-                                <div class="card-body py-3">
-                                    <h6 class="text-primary font-weight-bold mb-2">Melan sayt — tezkor kirish</h6>
-                                    <a href="blog-list.html" class="btn btn-sm btn-outline-primary mr-1 mb-1">Blog</a>
-                                    <a href="contact-inbox.html" class="btn btn-sm btn-outline-primary mr-1 mb-1">Aloqa</a>
-                                    <a href="users.html" class="btn btn-sm btn-outline-primary mr-1 mb-1">Foydalanuvchilar</a>
-                                    <a href="settings.html" class="btn btn-sm btn-outline-secondary mr-1 mb-1">Sozlamalar</a>
-                                    <a href="profile.html" class="btn btn-sm btn-outline-secondary mr-1 mb-1">Profil</a>
-                                    <a href="../user_intrface/index.html" class="btn btn-sm btn-success mb-1" target="_blank" rel="noopener">Saytga o'tish</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Content Row -->
-                    <div class="row">
-
-                        <!-- Oylik daromad Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-primary shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Oylik daromad</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Oylik daromad Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-success shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Yillik daromad</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Oylik daromad Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-info shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Vazifalar
-                                            </div>
-                                            <div class="row no-gutters align-items-center">
-                                                <div class="col-auto">
-                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="progress progress-sm mr-2">
-                                                        <div class="progress-bar bg-info" role="progressbar"
-                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                            aria-valuemax="100"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Kutilayotgan so'rovlar Card Example -->
-                        <div class="col-xl-3 col-md-6 mb-4">
-                            <div class="card border-left-warning shadow h-100 py-2">
-                                <div class="card-body">
-                                    <div class="row no-gutters align-items-center">
-                                        <div class="col mr-2">
-                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Kutilayotgan so'rovlar</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
-                                        </div>
-                                        <div class="col-auto">
-                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                   </div>
-                    </div>
-
-                </div>
-                <!-- /.container-fluid -->
-
-            </div>
-            <!-- End of Main Content -->
-
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Melan 2026</span>
-                    </div>
-                </div>
-            </footer>
-            <!-- End of Footer -->
-
+    <div class="content-wrap">
+      <header class="topbar">
+        <div>
+          <h1 class="h4 mb-0">Portfolio Admin Panel</h1>
+          <small class="text-secondary">Sayt kontentini shu yerdan boshqarishingiz mumkin</small>
         </div>
-        <!-- End of Content Wrapper -->
+        <div class="d-flex align-items-center gap-2">
+          <a href="../index.php" class="btn btn-outline-light btn-sm">Saytni ko'rish</a>
+          <button class="btn btn-primary btn-sm">Saqlash</button>
+        </div>
+      </header>
 
+      <main class="main-content">
+        <section class="row g-3 mb-4">
+          <div class="col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <p>Jami loyihalar</p>
+              <h3>12</h3>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <p>Yangi xabarlar</p>
+              <h3>8</h3>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <p>Faol xizmatlar</p>
+              <h3>5</h3>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="stat-card">
+              <p>Bugungi tashrif</p>
+              <h3>143</h3>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-box mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0">Portfolio loyihasini qo'shish</h2>
+            <span class="badge text-bg-info">Yangi</span>
+          </div>
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Loyiha nomi</label>
+              <input type="text" class="form-control" placeholder="Masalan: Restaurant Landing">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Kategoriya</label>
+              <select class="form-select">
+                <option>Landing Page</option>
+                <option>Corporate</option>
+                <option>E-commerce</option>
+                <option>Portfolio</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">GitHub yoki Demo link</label>
+              <input type="url" class="form-control" placeholder="https://example.com">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Loyiha rasmi</label>
+              <input type="file" class="form-control">
+            </div>
+            <div class="col-12">
+              <label class="form-label">Qisqa tavsif</label>
+              <textarea class="form-control" rows="4" placeholder="Loyiha haqida qisqacha yozing..."></textarea>
+            </div>
+            <div class="col-12 d-flex gap-2">
+              <button type="button" class="btn btn-primary">Loyihani saqlash</button>
+              <button type="reset" class="btn btn-outline-light">Tozalash</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="card-box">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0">Mavjud loyihalar</h2>
+            <input type="search" class="form-control form-control-sm table-search" placeholder="Qidirish...">
+          </div>
+          <div class="table-responsive">
+            <table class="table table-dark table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nomi</th>
+                  <th>Kategoriya</th>
+                  <th>Holat</th>
+                  <th>Yangilangan sana</th>
+                  <th>Amal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>01</td>
+                  <td>E-commerce Landing</td>
+                  <td>Landing Page</td>
+                  <td><span class="badge text-bg-success">Aktiv</span></td>
+                  <td>2026-04-02</td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-outline-info">Tahrirlash</button>
+                    <button type="button" class="btn btn-sm btn-outline-danger">O'chirish</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>Corporate Website</td>
+                  <td>Corporate</td>
+                  <td><span class="badge text-bg-success">Aktiv</span></td>
+                  <td>2026-03-28</td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-outline-info">Tahrirlash</button>
+                    <button type="button" class="btn btn-sm btn-outline-danger">O'chirish</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>Personal Portfolio</td>
+                  <td>Portfolio</td>
+                  <td><span class="badge text-bg-warning">Draft</span></td>
+                  <td>2026-03-25</td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-outline-info">Tahrirlash</button>
+                    <button type="button" class="btn btn-sm btn-outline-danger">O'chirish</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
     </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Bootstrap core JavaScript-->
-    <script src="asset/vendor/jquery/jquery.min.js"></script>
-    <script src="asset/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Core plugin JavaScript-->
-    <script src="asset/vendor/jquery-easing/jquery.easing.min.js"></script>
-
-    <!-- Custom scripts for all pages-->
-    <script src="asset/js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="asset/vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="asset/js/demo/chart-area-demo.js"></script>
-    <script src="asset/js/demo/chart-pie-demo.js"></script>
-
+  </div>
 </body>
-
 </html>

@@ -1,0 +1,76 @@
+/* Melan (user sayt) bilan mos rang va shrift — faqat Bootstrap/SB Admin ustidan */
+@import url("https://fonts.googleapis.com/css?family=Muli:300,300i,400,400i,600,600i,700,700i,800,800i,900&display=swap");
+
+body,
+.navbar,
+.sidebar {
+  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(180deg, #615cfd 0%, #4a46c4 100%) !important;
+  background-color: #615cfd !important;
+}
+
+.btn-primary {
+  background-color: #615cfd !important;
+  border-color: #615cfd !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #5248e0 !important;
+  border-color: #5248e0 !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active {
+  background-color: #4a3fd4 !important;
+  border-color: #4a3fd4 !important;
+}
+
+.border-left-primary {
+  border-left: 0.25rem solid #615cfd !important;
+}
+
+.text-primary {
+  color: #615cfd !important;
+}
+
+a.text-primary:hover,
+a.text-primary:focus {
+  color: #5248e0 !important;
+}
+
+.page-item.active .page-link {
+  background-color: #615cfd !important;
+  border-color: #615cfd !important;
+}
+
+.badge-primary {
+  background-color: #615cfd !important;
+}
+
+.progress-bar.bg-primary {
+  background-color: #615cfd !important;
+}
+
+.card-header .text-primary,
+h6.text-primary {
+  color: #615cfd !important;
+}
+
+.sidebar-dark .nav-item.active .nav-link {
+  color: #fff;
+}
+
+.sidebar-dark .nav-item .nav-link:active,
+.sidebar-dark .nav-item .nav-item .nav-link:focus,
+.sidebar-dark .nav-item .nav-link:hover {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.topbar .btn-primary {
+  background-color: #615cfd !important;
+  border-color: #615cfd !important;
+}

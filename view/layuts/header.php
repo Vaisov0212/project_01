@@ -64,7 +64,7 @@
                         <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                             <div class="Appointment">
                                 <div class="book_btn d-none d-lg-block">
-                                    <a href="contact.html">Bog'lanish</a>
+                                    <a href="admin/index.php">Bog'lanish</a>
                                 </div>
                             </div>
                         </div>

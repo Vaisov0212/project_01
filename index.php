@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!doctype html>
 <html lang="uz">
 <head>
@@ -209,19 +214,37 @@
             </ul>
           </div>
           <div class="col-lg-7">
-            <form class="contact-form">
+            <?php 
+            if($_SESSION["errors"]>0){
+               $errors=$_SESSION["errors"];
+                 echo "<ul>";
+                 foreach($errors as $error){
+                  echo "<li>". $error . "</li>";
+                 }
+                 echo "</ul>";
+                 unset($_SESSION["errors"]);
+                  
+            }
+            if(!empty($_SESSION["success"])){
+             echo $_SESSION["success"];
+              unset($_SESSION["success"]);
+            }
+            
+            
+            ?>
+            <form action="db/add_message.php" method="POST" class="contact-form">
               <div class="row g-3">
                 <div class="col-md-6">
-                  <input type="text" class="form-control" placeholder="Ismingiz" required>
+                  <input name="name" type="text" class="form-control" placeholder="Ismingiz" required>
                 </div>
                 <div class="col-md-6">
-                  <input type="email" class="form-control" placeholder="Email" required>
+                  <input name="email" type="email" class="form-control" placeholder="Email" required>
                 </div>
                 <div class="col-12">
-                  <input type="text" class="form-control" placeholder="Mavzu">
+                  <input name="subject" type="text" class="form-control" placeholder="Mavzu">
                 </div>
                 <div class="col-12">
-                  <textarea class="form-control" rows="5" placeholder="Xabaringiz"></textarea>
+                  <textarea name="message" class="form-control" rows="5" placeholder="Xabaringiz"></textarea>
                 </div>
                 <div class="col-12">
                   <button type="submit" class="btn btn-primary px-4">Yuborish</button>

@@ -215,7 +215,7 @@ session_start();
           </div>
           <div class="col-lg-7">
             <?php 
-            if($_SESSION["errors"]>0){
+            if(!empty($_SESSION["errors"])){
                $errors=$_SESSION["errors"];
                  echo "<ul>";
                  foreach($errors as $error){

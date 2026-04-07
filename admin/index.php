@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(empty($_SESSION["user_id"])){
+  header("Location:auth/login.php");
+}
+
+?>
+
+
 <!doctype html>
 <html lang="uz">
 <head>
@@ -21,6 +30,7 @@
         <a href="#" class="menu-link">Xizmatlar</a>
         <a href="#" class="menu-link">Xabarlar</a>
         <a href="#" class="menu-link">Sozlamalar</a>
+        <a href="auth/logout.php" class="menu-link">Chiqish-></a>
       </nav>
     </aside>
 

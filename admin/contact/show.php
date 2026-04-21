@@ -1,54 +1,59 @@
-<!doctype html>
-<html lang="uz">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact CRUD - Show</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/contact.css">
-</head>
-<body>
-  <div class="page-wrap">
-    <div class="panel">
-      <div class="title-row">
-        <h1 class="h4 mb-0">Contact xabar tafsiloti</h1>
-        <a href="index.php" class="btn btn-outline-light btn-sm">Orqaga</a>
-      </div>
-      <div class="row g-3">
-        <div class="col-md-6">
-          <div class="panel panel-soft">
-            <small class="text-secondary d-block mb-1">Ism</small>
-            <strong>Ali Valiyev</strong>
+<?php
+$link="../";
+include("../layouts/header.php");
+
+$m_id=$_GET["m_id"];
+$sql="SELECT * FROM contact WHERE id=:id";
+
+$stmt=$conn->prepare($sql);
+$stmt->execute([
+  ':id'=>$m_id
+]);
+$message=$stmt->fetch();
+  if($message["view"]==0){
+    $sql="UPDATE contact SET view=:view WHERE id=:id ";
+    $stmt=$conn->prepare($sql);
+    $stmt->execute([
+      ':view'=>1,
+      ':id'=>$m_id
+    ]);
+  }
+
+?>
+ <main class="main-content">
+       
+
+        <section class="card-box mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h5 mb-0">Xabarni to'liq o'qish</h2>
           </div>
-        </div>
-        <div class="col-md-6">
-          <div class="panel panel-soft">
-            <small class="text-secondary d-block mb-1">Email</small>
-            <strong>ali@mail.com</strong>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="panel panel-soft">
-            <small class="text-secondary d-block mb-1">Mavzu</small>
-            <strong>Yangi loyiha</strong>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="panel panel-soft">
-            <small class="text-secondary d-block mb-1">Sana</small>
-            <strong>2026-04-02</strong>
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="panel panel-soft">
-            <small class="text-secondary d-block mb-2">Xabar matni</small>
-            <p class="mb-0">Assalomu alaykum, men portfolio saytingiz uslubida yangi loyiha qildirmoqchiman.</p>
-          </div>
-        </div>
-      </div>
+          <form class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label">Ism</label>
+                <h4><?= $message["name"] ?></h4>
+            </div>
+            <div class="col-md-6">
+              <h4 class="form-label">Email:</h4>
+               <h4><?= $message["email"] ?></h4>
+            </div>
+            <div class="col-md-12">
+              <label class="form-label">Habar mavzusi</label>
+              <h4><?= $message["subject"] ?></h4>
+            </div>
+            
+            <div class="col-12">
+              <label class="form-label">Toliq matin</label>
+              <p><?= $message["message"] ?></p>
+            </div>
+            <div class="col-12 d-flex gap-2">
+              <a href="index.php" class="btn btn-primary">qaytish</a>
+              <button type="submit" class="btn btn-outline-danger">oçhirish</button>
+            </div>
+          </form>
+        </section>
+
+        
+      </main>
     </div>
   </div>
 </body>

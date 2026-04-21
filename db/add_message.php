@@ -28,14 +28,15 @@ if(count($errors)>0){
 else{
 
 try{
-    $sql="INSERT INTO contact(name,email,subject,message) 
-    VALUES(:name, :email, :subject, :message)";
+    $sql="INSERT INTO contact(name,email,subject,message,view) 
+    VALUES(:name, :email, :subject, :message,:view)";
     $m=$conn->prepare($sql);
     $m->execute([
         ':name'=>$name,
         ':email'=>$email,
         ':subject'=>$subject,
-        ':message'=>$message
+        ':message'=>$message,
+        'view'=>0
     ]);
     $_SESSION["success"]="Malumotlar yozildi";
     header("Location:../index.php");

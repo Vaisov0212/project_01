@@ -1,6 +1,7 @@
 
 
  <?php
+ $page="xabarlar";
  $link="../";
  include("../layouts/header.php");
  

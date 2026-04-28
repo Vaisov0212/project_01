@@ -34,12 +34,12 @@ $soni=$m_c["COUNT(view)"];
     <aside class="sidebar">
       <a href="#" class="brand">AZ Admin</a>
       <nav class="menu">
-        <a href="<?=$link?>index.php" class="menu-link active">Home</a>
-        <a href="<?=$link?>contact/index.php" class="menu-link">Xabarlar</a>
-        <!-- <a href="#" class="menu-link">Xizmatlar</a>
-        <a href="#" class="menu-link">Xabarlar</a>
-        <a href="#" class="menu-link">Sozlamalar</a> -->
-        <a href="auth/logout.php" class="menu-link">Chiqish-></a>
+        <a href="<?=$link?>index.php" class="menu-link <?php if($page=="home"){echo "active";}  ?>">Bosh sahifa</a>
+        <a href="<?=$link?>contact/index.php" class="menu-link <?php if($page=="xabarlar"){echo "active";}?>">Xabarlar</a>
+      <!-- <a href="#" class="menu-link">Xizmatlar</a>
+        <a href="#" class="menu-link">Xabarlar</a> -->
+        <a href="<?=$link?>profile/settings.php" class="menu-link <?php if($page=="sozlamalar"){echo "active";}?>">Sozlamalar</a>
+        <a href="<?=$link?>auth/logout.php" class="menu-link">Chiqish-></a>
       </nav>
     </aside>
 
